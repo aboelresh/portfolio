@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed Saad | Backend Developer & PHP/Laravel Specialist</title>
+  <meta name="description" content="Portfolio of Ahmed Saad Mohammed, a professional Backend Developer specializing in Laravel, PHP 8, database optimization, and scalable RESTful APIs.">
+  <meta name="author" content="Ahmed Saad Mohammed">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Background Gradients -->
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="container navbar">
+      <a href="#" class="logo">
+        <span>&lt;</span>AhmedSaad<span>/&gt;</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <!-- Dark mode Moon icon -->
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <!-- Light mode Sun icon (hidden by default) -->
+          <svg class="sun-icon" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+
+        <button class="burger" id="burger" aria-label="Menu Toggle">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1>Building Scalable <span class="gradient-text">APIs</span> & Robust <span class="gradient-text-accent">Backend</span> Systems</h1>
+        <p class="hero-tagline">Hi, I'm Ahmed Saad Mohammed, a Backend Developer & Laravel/PHP Specialist dedicated to writing clean, maintainable, and well-tested code.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+      </div>
+      
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-buttons">
+            <span class="term-close"></span>
+            <span class="term-min"></span>
+            <span class="term-max"></span>
+          </div>
+          <div class="terminal-title">bash - developer@ahmedsaad</div>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+          <!-- Terminal lines will be dynamically typed here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I am a passionate Backend Developer with a solid academic background and hands-on expertise in <strong>PHP 8</strong> and the <strong>Laravel framework</strong>. I specialize in designing and architecting scalable RESTful APIs, utilizing Clean Architecture, SOLID Principles, and Software Design Patterns to deliver maintainable enterprise solutions.</p>
+          <p>With an honor B.Sc. in Management Technology and Information Systems, I blend technical software engineering skills with an analytical mindset. My experience spans databases design & optimization, caching strategies with Redis, unit/feature testing with PHPUnit, DevOps (Docker, Linux), and AWS cloud integration.</p>
+          <p>I am committed to writing clean, well-documented, and fully tested code that drives business goals and ensures system reliability.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card glass-panel">
+            <span class="stat-num">6+</span>
+            <span class="stat-label">Complex Projects</span>
+          </div>
+          <div class="stat-card glass-panel">
+            <span class="stat-num">98%</span>
+            <span class="stat-label">API Test Coverage</span>
+          </div>
+          <div class="stat-card glass-panel">
+            <span class="stat-num">B2</span>
+            <span class="stat-label">English (Berlitz Certified)</span>
+          </div>
+          <div class="stat-card glass-panel">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Dedicated Focus</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Technical Expertise</h2>
+      <div class="skills-container">
+        
+        <!-- Category: Backend -->
+        <div class="skills-category glass-panel">
+          <h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+            Backend & Architecture
+          </h3>
+          <div class="skills-grid">
+            <div class="skill-tag"><span class="skill-name">PHP 8</span></div>
+            <div class="skill-tag"><span class="skill-name">Laravel</span></div>
+            <div class="skill-tag"><span class="skill-name">RESTful APIs</span></div>
+            <div class="skill-tag"><span class="skill-name">OOP Design</span></div>
+            <div class="skill-tag"><span class="skill-name">SOLID Principles</span></div>
+            <div class="skill-tag"><span class="skill-name">Clean Architecture</span></div>
+            <div class="skill-tag"><span class="skill-name">Design Patterns</span></div>
+          </div>
+        </div>
+
+        <!-- Category: Databases & Caching -->
+        <div class="skills-category glass-panel">
+          <h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+            Databases, Caching & Queues
+          </h3>
+          <div class="skills-grid">
+            <div class="skill-tag"><span class="skill-name">MySQL</span></div>
+            <div class="skill-tag"><span class="skill-name">PostgreSQL</span></div>
+            <div class="skill-tag"><span class="skill-name">Redis Caching</span></div>
+            <div class="skill-tag"><span class="skill-name">Laravel Queues</span></div>
+            <div class="skill-tag"><span class="skill-name">Database Design</span></div>
+            <div class="skill-tag"><span class="skill-name">Query Optimization</span></div>
+            <div class="skill-tag"><span class="skill-name">Indexing Strategies</span></div>
+          </div>
+        </div>
+
+        <!-- Category: DevOps, Testing & Cloud -->
+        <div class="skills-category glass-panel">
+          <h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            Testing, DevOps & Cloud
+          </h3>
+          <div class="skills-grid">
+            <div class="skill-tag"><span class="skill-name">PHPUnit</span></div>
+            <div class="skill-tag"><span class="skill-name">Feature Testing</span></div>
+            <div class="skill-tag"><span class="skill-name">Docker</span></div>
+            <div class="skill-tag"><span class="skill-name">Linux Servers</span></div>
+            <div class="skill-tag"><span class="skill-name">Nginx Configuration</span></div>
+            <div class="skill-tag"><span class="skill-name">GitHub Actions CI/CD</span></div>
+            <div class="skill-tag"><span class="skill-name">AWS (EC2, S3)</span></div>
+            <div class="skill-tag"><span class="skill-name">DigitalOcean VPS</span></div>
+          </div>
+        </div>
+
+        <!-- Category: Tools & CS Fundamentals -->
+        <div class="skills-category glass-panel">
+          <h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            Tools & CS Fundamentals
+          </h3>
+          <div class="skills-grid">
+            <div class="skill-tag"><span class="skill-name">Git & GitHub</span></div>
+            <div class="skill-tag"><span class="skill-name">Postman</span></div>
+            <div class="skill-tag"><span class="skill-name">Swagger / OpenAPI</span></div>
+            <div class="skill-tag"><span class="skill-name">Data Structures</span></div>
+            <div class="skill-tag"><span class="skill-name">Algorithms</span></div>
+            <div class="skill-tag"><span class="skill-name">System Design</span></div>
+            <div class="skill-tag"><span class="skill-name">CCNA Networking</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="laravel">Laravel & PHP</button>
+        <button class="filter-btn" data-filter="security">Security & Systems</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card glass-panel" data-categories="laravel">
+          <div class="project-header">
+            <div class="project-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Code Master</h3>
+            <p class="project-desc">A complex programming learning platform featuring a track-based progression system, team collaboration spaces, learner analytics engines, and AI assistant tools.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Laravel</span>
+              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">Redis</span>
+              <span class="tech-badge">APIs</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="read-more-btn" data-project="codemaster">
+              Read Details 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-panel" data-categories="laravel security">
+          <div class="project-header">
+            <div class="project-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-10 10.01-3-3"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Student Affairs System</h3>
+            <p class="project-desc">A university workflow engine digitizing course registrations and fee payments, incorporating advisor digital signatures and data encryption.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Laravel</span>
+              <span class="tech-badge">Digital Signatures</span>
+              <span class="tech-badge">Encryption</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="read-more-btn" data-project="studentaffairs">
+              Read Details 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass-panel" data-categories="laravel">
+          <div class="project-header">
+            <div class="project-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Dorm Management System</h3>
+            <p class="project-desc">Centralized student housing automation cover room allocations, dynamic maintenance tracking pipelines, and detailed administrator consoles.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Laravel</span>
+              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">Bootstrap</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="read-more-btn" data-project="dormmgmt">
+              Read Details 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass-panel" data-categories="laravel">
+          <div class="project-header">
+            <div class="project-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4c0-.5.2-1 .6-1.4C5 2.2 5.5 2 6 2h12c.5 0 1 .2 1.4.6.4.4.6.9.6 1.4v18l-8-4-8 4z"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">News Aggregator & Summarizer</h3>
+            <p class="project-desc">Automated content scheduler fetching news via APIs, categorizing articles, and implementing text summaries for concise reading.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Laravel</span>
+              <span class="tech-badge">Cron Jobs</span>
+              <span class="tech-badge">Text Summarization</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="read-more-btn" data-project="newsaggregator">
+              Read Details 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card glass-panel" data-categories="security">
+          <div class="project-header">
+            <div class="project-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Secure Messaging System</h3>
+            <p class="project-desc">A communication app prioritizing user privacy with multi-layered data encryption applied over transit payloads and database storage logs.</p>
+            <div class="project-tech">
+              <span class="tech-badge">PHP 8</span>
+              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">AES Encryption</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="read-more-btn" data-project="securemessaging">
+              Read Details 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card glass-panel" data-categories="laravel">
+          <div class="project-header">
+            <div class="project-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10v6"/><path d="M22 12a10 10 0 0 1-20 0 10 10 0 0 1 20 0z"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Rafeeq Platform</h3>
+            <p class="project-desc">An interactive programming academy for kids/beginners containing lessons, automatic code runners, and custom admin publishing tools.</p>
+            <div class="project-tech">
+              <span class="tech-badge">PHP 8</span>
+              <span class="tech-badge">MySQL</span>
+              <span class="tech-badge">Content Management</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="read-more-btn" data-project="rafeeq">
+              Read Details 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & TIMELINE -->
+  <section id="education">
+    <div class="container">
+      <h2 class="section-title">Education & Certifications</h2>
+      
+      <div class="timeline">
+        <!-- Degree -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-date">2021 - 2025</span>
+            <h3 class="timeline-title">B.Sc. in Management Technology & Information Systems</h3>
+            <h4 class="timeline-subtitle">Port Said University — Faculty of Management Technology and Information Systems (TIS)</h4>
+            <p class="timeline-desc">Graduated with <strong>Very Good with High Honors (B+)</strong>. The curriculum integrated advanced software engineering, data structures, database management systems, and system design alongside business technology models.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="certifications-section">
+        <h3 class="section-title" style="font-size: 1.8rem; margin-top: 2rem; margin-bottom: 2rem;">Certifications & Training</h3>
+        <div class="certifications-grid">
+          
+          <div class="cert-card glass-panel">
+            <div class="cert-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div class="cert-info">
+              <h4 class="cert-title">English Language Proficiency — B2 Level</h4>
+              <p class="cert-issuer">Berlitz International (2024)</p>
+            </div>
+          </div>
+
+          <div class="cert-card glass-panel">
+            <div class="cert-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div class="cert-info">
+              <h4 class="cert-title">Continuous Self-Directed Learning</h4>
+              <p class="cert-issuer">Official Docs: Laravel, Docker, AWS, PostgreSQL, Redis</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      
+      <div class="contact-grid">
+        
+        <div class="contact-info">
+          <div class="contact-intro">
+            <h3>Let's build something scalable!</h3>
+            <p>I am currently looking for new opportunities as a Laravel / PHP Developer or general Backend Engineer. If you have a question, want to discuss a project, or just say hello, feel free to reach out!</p>
+          </div>
+
+          <div class="contact-details">
+            
+            <!-- Email -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <a href="mailto:ahmedaboelresh2004@gmail.com" id="email-address">ahmedaboelresh2004@gmail.com</a>
+              </div>
+              <button class="copy-btn" id="copy-email-btn" aria-label="Copy Email" title="Copy Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              </button>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-text">
+                <h4>Phone</h4>
+                <a href="tel:+201153847691">01153847691</a>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-text">
+                <h4>Location</h4>
+                <p>Cairo, Egypt</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="social-links">
+            <a href="https://linkedin.com/in/ahmed-saad-asm3" target="_blank" class="social-btn" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com/aboelresh" target="_blank" class="social-btn" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form glass-panel">
+          <form id="portfolio-contact-form">
+            <div class="form-group">
+              <label for="form-name">Full Name</label>
+              <input type="text" id="form-name" class="form-control" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email">Email Address</label>
+              <input type="email" id="form-email" class="form-control" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" class="form-control" placeholder="Collaboration / Job Opportunity" required>
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" class="form-control" placeholder="Hello Ahmed, I would like to discuss..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+            <div class="form-status" id="form-status"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Ahmed Saad Mohammed. Built with passion & clean code.</p>
+    </div>
+  </footer>
+
+  <!-- DETAIL MODAL -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-container glass-panel">
+      <button class="modal-close" id="modal-close" aria-label="Close Modal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Content dynamically injected from app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="clipboard-toast">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+    <span>Email copied to clipboard!</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
