@@ -965,21 +965,6 @@ textarea.form-control {
   min-height: 120px;
 }
 
-.form-status {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  display: none;
-}
-
-.form-status.success {
-  color: #10b981;
-}
-
-.form-status.error {
-  color: #ef4444;
-}
-
 /* --- FOOTER --- */
 footer {
   border-top: 1px solid var(--border-color);
@@ -1134,6 +1119,17 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+
+  .hero-recruiter-card {
+    text-align: left;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .hero-resume-cta {
+    display: flex;
+    justify-content: center;
+  }
   
   .terminal-window {
     margin: 0 auto;
@@ -1159,6 +1155,13 @@ footer {
     transform: translateX(100%);
     transition: transform var(--transition-normal);
     border-top: 1px solid var(--border-color);
+    z-index: 99;
+  }
+
+  /* Larger touch targets for nav links on mobile */
+  .nav-links a {
+    font-size: 1.15rem;
+    padding: 0.5rem 1rem;
   }
   
   .nav-links.open {
@@ -1182,18 +1185,488 @@ footer {
   
   .about-grid, .contact-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
   
   .hero-content h1 {
-    font-size: 2.75rem;
+    font-size: 2.4rem;
+    letter-spacing: -0.02em;
   }
-  
+
+  /* Hero recruiter card — full width on mobile */
+  .hero-recruiter-card {
+    max-width: 100%;
+  }
+
+  /* Hero buttons — stack on small screens */
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  /* Ensure all hero buttons are at least 44px tall (touch target) */
+  .hero-actions .btn,
+  .hero-resume-cta .btn {
+    min-height: 48px;
+    justify-content: center;
+  }
+
+  .hero-resume-cta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-resume-cta .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Contact items — full tap area */
+  .contact-item {
+    gap: 0.875rem;
+    padding: 0.875rem;
+  }
+
+  /* Copy button — 44px minimum tap target */
+  .copy-btn {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Social buttons — already 44px, verified */
+  .social-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Projects grid — single column */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Filter buttons — scrollable row on small screens */
+  .projects-filter {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .projects-filter::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+    min-height: 44px;
+  }
+
   .certifications-grid {
     grid-template-columns: 1fr;
   }
   
   .modal-body {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.25rem;
+  }
+
+  /* Toast on mobile — full bottom, centered */
+  .toast {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1.5rem;
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Skills grid — 2 col on mobile */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}
+
+/* ============================================================
+   HERO RESUME CTA
+   ============================================================ */
+.hero-resume-cta {
+  margin-top: 0.75rem;
+}
+
+/* Resume button uses btn-secondary — no overrides needed,
+   inherits the existing secondary style exactly. */
+
+/* ============================================================
+   HERO RECRUITER CARD
+   ============================================================ */
+.hero-recruiter-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin-bottom: 1.75rem;
+  max-width: 480px;
+}
+
+.recruiter-card-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--secondary);
+}
+
+.recruiter-card-roles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.recruiter-sep {
+  color: var(--text-light);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.recruiter-card-availability {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.recruiter-card-availability svg {
+  color: var(--text-light);
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   AVAILABLE FOR SECTION
+   ============================================================ */
+#available-for {
+  padding: 0 0 4rem 0;
+}
+
+.available-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 1.25rem 1.75rem;
+  border-radius: 16px;
+}
+
+.available-content {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  width: 100%;
+}
+
+.available-heading {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--text-light);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+}
+
+.available-roles {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  padding: 0;
+}
+
+.available-roles li {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  position: relative;
+  padding-left: 0.75rem;
+}
+
+.available-roles li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+/* ============================================================
+   PROJECT CARD ENHANCEMENTS
+   ============================================================ */
+.project-meta-row {
+  margin-bottom: 0.5rem;
+}
+
+.project-role-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--secondary);
+  background: var(--secondary-glow);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.project-problem {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.project-challenge {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: rgba(255, 45, 32, 0.04);
+  border-left: 2px solid var(--primary);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0 6px 6px 0;
+  margin: 0.75rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  line-height: 1.5;
+}
+
+.project-challenge svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--primary);
+}
+
+.project-link-private {
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* ============================================================
+   MODAL ENHANCEMENTS
+   ============================================================ */
+.modal-role-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--secondary);
+  background: var(--secondary-glow);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  padding: 0.25rem 0.7rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.modal-problem-block {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  background: rgba(255, 45, 32, 0.04);
+  border-left: 3px solid var(--primary);
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.modal-problem-block strong {
+  color: var(--text-main);
+}
+
+/* ============================================================
+   WHATSAPP CONTACT ITEM
+   ============================================================ */
+.contact-icon-whatsapp {
+  background: rgba(37, 211, 102, 0.1) !important;
+  color: #25d366 !important;
+}
+
+.contact-item-whatsapp {
+  border-color: rgba(37, 211, 102, 0.15);
+}
+
+.contact-item-whatsapp:hover {
+  border-color: rgba(37, 211, 102, 0.35) !important;
+}
+
+.whatsapp-arrow {
+  margin-left: auto;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.4rem;
+  border-radius: 4px;
+  transition: color var(--transition-fast);
+}
+
+.whatsapp-arrow:hover {
+  color: #25d366;
+}
+
+/* ============================================================
+   COPY BUTTON — SUCCESS STATE
+   ============================================================ */
+.copy-btn {
+  transition: all var(--transition-fast);
+}
+
+.copy-btn .copy-icon-success {
+  color: var(--secondary);
+}
+
+/* ============================================================
+   FORM SUBMIT BUTTON — LOADING STATE
+   ============================================================ */
+.btn-submit {
+  position: relative;
+}
+
+.btn-submit-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ============================================================
+   FORM STATUS DISPLAY
+   ============================================================ */
+.form-status {
+  display: none;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+.form-status.success {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.form-status.error {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* ============================================================
+   RESPONSIVE — AVAILABLE FOR on mobile
+   ============================================================ */
+@media (max-width: 768px) {
+  .available-wrapper {
+    padding: 1rem 1.25rem;
+  }
+
+  .available-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .recruiter-card-roles {
+    font-size: 0.85rem;
+  }
+
+  .recruiter-sep {
+    display: none;
+  }
+
+  .recruiter-card-roles span {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   EXTRA SMALL SCREENS (< 480px) — phones
+   ============================================================ */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .recruiter-card-roles {
+    font-size: 0.82rem;
+    gap: 0.25rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .skills-category {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .stat-num {
+    font-size: 1.85rem;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .available-wrapper {
+    padding: 1rem;
   }
 }
