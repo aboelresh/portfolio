@@ -7,9 +7,9 @@
 //      {{from_name}}, {{from_email}}, {{subject}}, {{message}}
 //   4. Paste your Public Key, Service ID, and Template ID below
 // ============================================================
-const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";   // e.g. "user_abc123xyz"
-const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";   // e.g. "service_gmail"
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";  // e.g. "template_contact"
+const EMAILJS_PUBLIC_KEY  = "FpD2KQih6vkAlW0x3";   
+const EMAILJS_SERVICE_ID  = "service_o9miuoa";   
+const EMAILJS_TEMPLATE_ID = "template_36414hj";  
 
 // ============================================================
 // Project Data for Modal
