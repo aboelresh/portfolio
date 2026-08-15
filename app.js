@@ -7,14 +7,32 @@
 //      {{from_name}}, {{from_email}}, {{subject}}, {{message}}
 //   4. Paste your Public Key, Service ID, and Template ID below
 // ============================================================
-const EMAILJS_PUBLIC_KEY  = "FpD2KQih6vkAlW0x3";   
-const EMAILJS_SERVICE_ID  = "service_o9miuoa";   
-const EMAILJS_TEMPLATE_ID = "template_36414hj";  
+const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";   // e.g. "user_abc123xyz"
+const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";   // e.g. "service_gmail"
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";  // e.g. "template_contact"
 
 // ============================================================
 // Project Data for Modal
 // ============================================================
 const projectsData = {
+  nexusplatform: {
+    title: "NexusPlatform — Enterprise Communication Platform",
+    tech: ["Laravel 12", "PHP 8.2", "MySQL", "Redis", "WebSockets (Reverb)", "WebRTC", "Sanctum", "Spatie", "Queue Workers", "DDD"],
+    role: "Solo Architect & Developer",
+    problem: "Enterprise teams need a unified real-time communication backend with fine-grained role-based access, media pipelines, and voice/video support — built to production standards from day one.",
+    summary: "Designed and built a production-ready enterprise communication backend using Domain-Driven Design (DDD). The system covers 10 fully isolated business domains, exposes 76+ versioned REST API endpoints, and ships with a complete Postman collection of 200+ automated tests.",
+    features: [
+      "10 Business Domains: Auth, Chat, Groups, Calls, Notifications, Media, Users, Roles, Channels, and Developer Console — each fully isolated following DDD bounded contexts.",
+      "76+ Versioned REST Endpoints: All routes namespaced under /api/v1/ with consistent response contracts, pagination, and error handling.",
+      "Real-time Messaging via WebSockets: Implemented using Laravel Reverb — supports live message delivery, typing indicators, and presence channels.",
+      "WebRTC Signaling: Built a signaling server layer for peer-to-peer voice and video calls, handling offer/answer/ICE candidate exchange between clients.",
+      "Role-based Access Control: Four-tier RBAC system (Owner / Admin / Moderator / Member) with granular permission gates per domain action.",
+      "Media Pipeline: Automatic WebP conversion and thumbnail generation for uploaded media, reducing bandwidth usage and improving load performance.",
+      "Developer Console: Built-in health check dashboard and system diagnostics panel for monitoring queue workers, WebSocket connections, and service status.",
+      "200+ Automated Tests: Full Postman collection covering happy paths, edge cases, and auth scenarios for every endpoint."
+    ],
+    architecture: "Follows Domain-Driven Design with strict bounded contexts — each domain owns its models, services, repositories, and events. Real-time infrastructure (Reverb) is abstracted behind domain events to keep business logic decoupled from transport layer. Redis handles session caching, queue workers, and WebSocket presence state. Sanctum manages API token authentication, Spatie handles permission resolution."
+  },
   codemaster: {
     title: "Code Master — Programming Learning Platform",
     tech: ["Laravel", "PHP 8", "MySQL", "Redis Caching", "RESTful APIs", "Background Jobs"],
