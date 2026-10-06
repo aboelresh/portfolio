@@ -33,20 +33,21 @@ const projectsData = {
     ],
     architecture: "Follows Domain-Driven Design with strict bounded contexts — each domain owns its models, services, repositories, and events. Real-time infrastructure (Reverb) is abstracted behind domain events to keep business logic decoupled from transport layer. Redis handles session caching, queue workers, and WebSocket presence state. Sanctum manages API token authentication, Spatie handles permission resolution."
   },
-  codemaster: {
-    title: "Code Master — Programming Learning Platform",
-    tech: ["Laravel", "PHP 8", "MySQL", "Redis Caching", "RESTful APIs", "Background Jobs"],
+  riwaq: {
+    title: "Riwaq — Multi-tenant SaaS Adaptive Learning Platform API",
+    tech: ["Laravel 12", "PHP 8.2", "MySQL 8", "Redis", "Docker", "PHPUnit", "OpenAPI", "GitHub Actions CI/CD", "Nginx", "Supervisor"],
     role: "Solo Architect & Developer",
-    problem: "Unstructured online learning lets learners skip foundational modules, producing shallow knowledge and high dropout rates.",
-    summary: "Architected a full-featured e-learning platform with a mandatory track-based system; learners cannot advance without passing a minimum-score exam per course, enforcing structured progression.",
+    problem: "SaaS learning platforms need strict tenant isolation, plan-based entitlements, and production-grade security — all without coupling business logic to infrastructure concerns.",
+    summary: "Full SaaS backend built from scratch: 118 API endpoints versioned under /api/v1/, 48 database migrations, multi-tenancy via Shared Schema pattern, and 127 PHPUnit tests across unit, feature, and security suites — deployed with a single-command production setup.",
     features: [
-      "Track-based system: Enforces structured learning paths where students must pass exams before continuing.",
-      "Collaboration Space: Enables learners to form project groups or study circles with shared workspaces.",
-      "Analytics Engine: Evaluates exam scores, course completion, and team interaction to generate detailed skills radar charts.",
-      "Workstation: Features a Pomodoro-style timer, personal to-do list, and media library to support focused study sessions.",
-      "AI Assistant: Integrated FAQ chatbot and real-time AI-powered assistant to answer learner queries instantly."
+      "Multi-tenancy (Shared Schema): Tenant isolation enforced at Model level via Eloquent Global Scopes — verified by dedicated cross-tenant security tests to prevent data leakage.",
+      "Entitlements Engine: Built EntitlementService to decouple plan limits from business logic, eliminating scattered plan checks across controllers and keeping upgrade paths clean.",
+      "Security Hardening: Resolved 17 production bugs including IDOR vulnerabilities, SQL injection risks, mass assignment bypass, and race conditions in team transactions.",
+      "127 PHPUnit Tests: Full test suite covering unit, feature, and security scenarios — runs on both SQLite (CI) and MySQL 8 (production) to catch driver-specific edge cases.",
+      "118 REST API Endpoints: Fully versioned under /api/v1/ with consistent response contracts, pagination, and structured error handling documented via OpenAPI.",
+      "DevOps Setup: Docker, GitHub Actions CI/CD, Nginx SSL termination, and Supervisor queue workers configured for single-command production deployment."
     ],
-    architecture: "Built with Laravel APIs and MySQL as the relational storage. Background jobs are handled via Laravel Queues and Redis for high-performance job scheduling and tracking. The analytics system runs background summarization scripts to keep calculations efficient."
+    architecture: "Shared Schema multi-tenancy with Eloquent Global Scopes as the isolation layer — simpler than separate databases, enforced at ORM level rather than query level. EntitlementService centralizes all plan-limit checks so billing changes touch one class, not dozens of controllers. GitHub Actions runs the full PHPUnit suite on every push against both SQLite and MySQL 8, catching regressions before they reach production."
   },
   studentaffairs: {
     title: "Student Affairs Management System",
